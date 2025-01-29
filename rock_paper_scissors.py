@@ -26,14 +26,24 @@ texto.hideturtle()
 
 # Bucle 
 while True:
-    texto.clear()
-    action = wn.textinput("Input", "Action: rock | scissor | paper ").lower()  #
+    action = wn.textinput("Input", "Action: rock | scissor | paper ")  #
     if action:  
         # Only write if you select rock, scissors or paper
+        action = action.lower()
         if action == "rock" or action == "scissor" or action == "paper":
-            texto.write(f"Tu opción es: {action}")
             maquina = random.choice(["rock","scissor","paper"])
-         # We need a random number to select a rock,scissors and papaer
+            # We need a random number to select a rock,scissors and papaer
+            resultado = ganador(action,maquina)
+            # Mostrar las elecciones y el resultado
+            texto.clear()
+            texto.write(f"Tú: {action}\nMáquina: {maquina}\n{resultado}", 
+            align="center", font=("Arial", 16, "bold"))
+
+            time.sleep(1) # Stop one second
+        else:
+            texto.write("Opcion no reconocida",align="center", font=("Arial", 16, "bold"))
+            time.sleep(1)
+            texto.clear()
   
     else:
         break # Exit the game if you say Cancel
