@@ -16,11 +16,12 @@ texto.hideturtle()
 # Bucle 
 while True:
     texto.clear()
-    action = wn.textinput("Input", "Action: rock | scissor | paper ")  #
+    action = wn.textinput("Input", "Action: rock | scissor | paper ").lower()  #
     if action:  
         # Only write if you select rock, scissors or paper
         if action == "rock" or action == "scissor" or action == "paper":
             texto.write(f"Tu opción es: {action}")
+            maquina = random.choice(["rock","scissor","paper"])
          # We need a random number to select a rock,scissors and papaer
   
     else:
