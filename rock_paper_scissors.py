@@ -17,9 +17,11 @@ texto.hideturtle()
 while True:
     action = wn.textinput("Input", "Introduce qué quieres hacer: ")  #
     if action:  
-        texto.write(f"Has introducido: {action}")
-        # We need a random number to select a rock,scissors and papaer
-        
+        # Only write if you select rock, scissors or paper
+        if action == "rock" or action == "scissor" or action == "paper":
+            texto.write(f"Tu opción es: {action}")
+         # We need a random number to select a rock,scissors and papaer
+  
     else:
         break # Exit the game if you say Cancel
     
