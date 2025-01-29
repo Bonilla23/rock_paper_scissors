@@ -2,6 +2,17 @@ import turtle
 import time
 import random
 
+# Create the function
+def ganador(action, maquina):
+    if action == maquina:
+        return "Empate!"
+    elif (action == "rock" and maquina == "scissor") or \
+         (action == "scissor" and maquina == "paper") or \
+         (action == "paper" and maquina == "rock"):
+        return "Ganaste!"
+    else:
+        return "Perdiste!"
+
 # Screen configuration
 wn = turtle.Screen()
 wn.setup(width=600, height=600) 
