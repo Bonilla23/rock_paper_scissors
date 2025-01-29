@@ -15,7 +15,8 @@ texto.hideturtle()
 
 # Bucle 
 while True:
-    action = wn.textinput("Input", "Introduce qué quieres hacer: ")  #
+    texto.clear()
+    action = wn.textinput("Input", "Action: rock | scissor | paper ")  #
     if action:  
         # Only write if you select rock, scissors or paper
         if action == "rock" or action == "scissor" or action == "paper":
