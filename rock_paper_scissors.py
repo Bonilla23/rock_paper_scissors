@@ -1,20 +1,21 @@
 import turtle
 import time
 
-# Configurar la ventana
+# Screen configuration
 wn = turtle.Screen()
-wn.setup(width=600, height=600)  # Tamaño correcto
+wn.setup(width=600, height=600) 
 wn.bgcolor("grey")
 
-# Crear el texto
+# Text configuration
 texto = turtle.Turtle()
 texto.penup()
 texto.goto(0,0)
+texto.hideturtle()
 
-# Bucle del juego
+# Bucle 
 while True:
-    action = wn.textinput("Input", "Introduce qué quieres hacer: ")  # Pedir entrada al usuario
-    if action:  # Si el usuario introduce algo
+    action = wn.textinput("Input", "Introduce qué quieres hacer: ")  #
+    if action:  
         texto.write(f"Has introducido: {action}")
     
-    time.sleep(1)  # Pequeña pausa para evitar saturación
+    time.sleep(1) # Stop one second
