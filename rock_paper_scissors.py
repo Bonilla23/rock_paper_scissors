@@ -17,5 +17,7 @@ while True:
     action = wn.textinput("Input", "Introduce qué quieres hacer: ")  #
     if action:  
         texto.write(f"Has introducido: {action}")
+    else:
+        break # Exit the game if you say Cancel
     
     time.sleep(1) # Stop one second
